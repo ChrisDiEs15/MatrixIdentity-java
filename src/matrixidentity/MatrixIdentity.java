@@ -5,12 +5,14 @@
 package matrixidentity;
 
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Chris
  */
 public class MatrixIdentity {
+    private static final Logger logger = Logger.getLogger(MatrixIdentity.class.getName());
 
     /**
      * @param args the command line arguments
@@ -25,6 +27,8 @@ public class MatrixIdentity {
         int fila = tamano.nextInt();
         System.out.println("Ingrese el tamano de las columnas ");
         int columna = tamano.nextInt();
+
+        logger.info("Valor de fila: " + fila + ", valor de columna: " + columna);
 
         /*Func to determine if the matriz is square */
         if (isSquare(fila, columna)) {
